@@ -27,7 +27,9 @@
     "angular": "^1.4.1",
     "angular-resource": "^1.4.1",
     "angularfire": "^1.1.1",
+    "foundation-grid": "^0.1.0",
     "jquery": "^2.1.4",
-    "swiper": "^3.1.0"
+    "swiper": "^3.1.0",
+    "twitter-bootstrap": "^2.1.1"
   }
 }

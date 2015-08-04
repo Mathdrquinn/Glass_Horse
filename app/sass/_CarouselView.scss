@@ -1,0 +1,24 @@
+// Pending Wheel
+#content {
+  width:100%;
+  height:$carouselHeight;
+  overflow: hidden;
+}
+.pending {
+  text-align: center;
+  height:$carouselHeight;
+  img {
+    height: 100%;
+  }
+}
+.swiper-container {
+  width: 500px;
+  height: $carouselHeight;
+  overflow: hidden;
+  .swiper-slide {
+    overflow: hidden;
+  }
+}
+.label-container {
+  border-bottom: 1px solid darkgrey;
+}

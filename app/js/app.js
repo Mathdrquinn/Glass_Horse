@@ -8,7 +8,7 @@ angular.module("CarouselApp", ["ngRoute", "ngResource", "firebase", "ui.router"]
             .when("/", {
 
                 templateUrl:"../views/carousel.html",
-                controller:"homeCtrl"
+                controller:"carouselCtrl"
 
             })
 
