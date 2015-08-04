@@ -1,0 +1,12 @@
+form {
+  height:225px;
+  border: 1px solid lightgray;
+  overflow:hidden;
+}
+#q1Ba:checked + .q1Ba,
+#q1a1:checked + .q1a1-title,
+#q1a2:checked + .q1a2-title,
+#q1a3:checked + .q1a3-title {
+  height:0px;
+  overflow:hidden;
+}

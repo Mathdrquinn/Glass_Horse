@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="robots" content="noindex, nofollow">
+	<title>Carousel Builder</title>
+	<!--<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation-essential/5.5.1/css/foundation.min.css">-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,700,600,400' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<!-- Define App-->
+<body ng-app="CarouselApp">
+	<h1>Welcome to Carousell Builder</h1>
+	<!-- Begin homeCtrl-->
+	<div id="wrapper" ng-controller="homeCtrl">
+		<h3>{{works}}</h3>
+
+		<form action="">
+			<div class="label-container">
+				<label for="initialSlide">
+					Initial Slide
+					<br/>
+					<input id="initialSlide" type="number" ng-model="options.initialSlide" min="0" max="{{mySwiper.slidesGrid.length -3}}" ng-change="change()"/>
+				</label>
+			</div>
+			<div class="label-container">
+				<label>
+					Direction
+					<br/>
+					<input type="radio" ng-model="options.direction" value="vertical" ng-change="change()">
+					Vertical
+				</label>
+				<label>
+					<input type="radio" ng-model="options.direction" value="horizontal" ng-change="change()">
+					Horizontal
+				</label>
+			</div>
+			<div class="label-container">
+				<label for="speed">
+					Speed
+					<br/>
+					<input id="speed" type="number" ng-model="options.speed" value="300" ng-change="change()"/>
+				</label>
+			</div>
+			<div class="label-container">
+				<label for="loop">
+					Loop
+					<br/>
+					<select name="loop" id="loop" ng-model="options.loop" ng-change="change()">
+						<option value="1">True</option>
+						<option value="">False</option>
+					</select>
+				</label>
+			</div>
+			<br/>
+		</form>
+
+		<h4>Carousel</h4>
+		<!-- Email View-->
+		<div id="content">
+			<div class="swiper-outer-container">
+				<div class="swiper-container">
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="swiper-slide">
+							Slide 1 <br />
+							<img src="images/300.jpeg" alt="Placebear" />
+						</div>
+						<div class="swiper-slide">
+							Slide 2 Change <br />
+							<img src="images/300 (1).jpeg" alt="Placebear" />
+						</div>
+						<div class="swiper-slide">
+							Slide 3  <br />
+							<img src="images/301.jpeg" alt="Placebear" />
+						</div>
+					</div>
+					<!-- If we need pagination -->
+					<div class="swiper-pagination"></div>
+
+					<!-- If we need navigation buttons -->
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+
+					<!-- If we need scrollbar -->
+					<!--<div class="swiper-scrollbar"></div>-->
+				</div>
+			</div>
+		</div>
+		<!-- End Email View-->
+
+	</div>
+	<!-- End homeCtrl-->
+
+<script src="js/angular/angular.min.js"></script>
+<script src="js/angularfire/dist/angularfire.min.js"></script>
+<script src="js/angular-route/angular-route.min.js"></script>
+<script src="js/ui-router/angular-ui-router.js"></script>
+<script src="js/angular-resource/angular-resource.min.js"></script>
+<script src="js/jquery/dist/jquery.min.js"></script>
+<script src="js/swiper/swiper.min.js"></script>
+
+
+<script src="js/app.js"></script>
+
+<script src="js/homeCtrl.js"></script>
+<script src="js/homeSvc.js"></script>
+
+<script src="js/Carousel.js"></script>
+</body>
+<!-- End App-->
+</html>

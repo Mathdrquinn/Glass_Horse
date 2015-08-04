@@ -1,0 +1,80 @@
+/* CTA Styling
+//////////////////////////////////
+*/.primary-cta, #subbutton, .entry-content a[class^="primary-cta"] {
+  color: #fff;
+  text-decoration: none;
+  background-color: $light-red;
+  padding: 12px 28px 10px 28px;
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+}
+.entry-content a[class^="primary-cta"] {
+  display: inline-block;
+}
+.primary-cta:hover, #subbutton:hover, .entry-content a[class^="primary-cta"]:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: $red;
+  text-transform: uppercase;
+}
+
+
+.secondary-cta, .entry-content a[class^="secondary-cta"] {
+  color: #fff;
+  text-decoration: none;
+  background-color: $light-black;
+  padding: 12px 28px 10px 28px;
+  width: 100%;
+  text-transform: uppercase;
+  text-align:center;
+}
+.entry-content a[class^="secondary-cta"] {
+  display: inline-block;
+}
+.secondary-cta:hover, .entry-content a[class^="secondary-cta"]:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: lighten($black, 5%);
+  text-transform: uppercase;
+  text-align:center;
+}
+.pagination ul li a {
+  color: #fff;
+  text-decoration: none;
+  background-color: $light-black;
+  padding: 12px 28px 10px 28px;
+  border:none;
+  text-transform: uppercase;
+}
+.pagination ul li a:hover, .pagination ul li.active a {
+  color: #fff;
+  text-decoration: none;
+  background-color: lighten($black, 5%);
+  border:none;
+  text-transform: uppercase;
+}
+
+
+.disabled-cta, .entry-content a[class^="disabled-cta"] {
+  color: #fff;
+  text-decoration: none;
+  background-color: lighten($light-black, 10%);
+  padding: 12px 28px 10px 28px;
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+}
+.entry-content a[class^="disabled-cta"] {
+  display: inline-block;
+}
+.disabled-cta:hover, .entry-content a[class^="disabled-cta"]:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: lighten($light-black, 10%);
+  text-transform: uppercase;
+}
+//.shop-cta {
+//  width:auto;
+//  margin-top:15px;
+//}
