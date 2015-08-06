@@ -1,10 +1,12 @@
 html, body {
   margin: 0;
   padding: 0;
+  background-color: #fffef9;
 }
 
 body * {
   color: #18121F;
+  font-family: 'Abel', sans-serif;
 }
 
 *, *:before, *:after {
@@ -1273,31 +1275,41 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #wrapper {
-  margin-left: 100px;
-  padding: 1em;
+  margin: 0px;
+  padding: 0em;
 }
 
 #content {
   width: 100%;
-  height: 315px;
+  height: auto;
   overflow: hidden;
 }
 
 .pending {
   text-align: center;
-  height: 315px;
+  height: auto;
 }
 .pending img {
   height: 100%;
 }
 
 .swiper-container {
-  width: 500px;
-  height: 315px;
+  height: auto;
   overflow: hidden;
 }
 .swiper-container .swiper-slide {
   overflow: hidden;
+}
+.swiper-container .swiper-slide .slide-title {
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
+  color: #fffef9;
+  font-size: 36px;
+  text-shadow: 1px 1px 1px solid #18121F;
+}
+.swiper-container .swiper-slide img {
+  width: 100%;
 }
 
 .label-container {
@@ -1305,16 +1317,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
-  background-color: #105b63;
+  background-color: #BD4932;
   padding: 0;
-  margin-left: 100px;
+  margin: 0;
+  border-bottom: 3px solid #105b63;
 }
 header h1 {
-  color: #fffad5;
+  color: #fffef9;
   margin: 0;
   padding: 10px 0px 10px 0px;
   text-align: center;
-  box-shadow: 5px 2px 4px rgba(0, 0, 0, 0.4);
 }
 header nav {
   z-index: -1;
@@ -1324,7 +1336,7 @@ header nav {
   width: 100px;
   padding: 10px;
   height: 100%;
-  background-color: #105b63;
+  background-color: #BD4932;
   padding-top: 60px;
   box-shadow: 5px 2px 4px rgba(0, 0, 0, 0.4);
 }
@@ -1334,7 +1346,7 @@ header nav ul {
   padding: 0;
 }
 header nav ul li, header nav ul a {
-  color: #fffad5;
+  color: #fffef9;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -1817,15 +1829,12 @@ button.swiper-pagination-bullet {
 form {
   height: 225px;
   border: 1px solid lightgray;
-  overflow: hidden;
+  overflow: scroll;
 }
 
-#q1Ba:checked + .q1Ba,
-#q1a1:checked + .q1a1-title,
-#q1a2:checked + .q1a2-title,
-#q1a3:checked + .q1a3-title {
-  height: 0px;
-  overflow: hidden;
+.label-child {
+  margin-left: 25px;
+  border: none;
 }
 
 @media only screen and (max-width: 600px) {

@@ -1,13 +1,14 @@
 header {
-  background-color: $second;
+  background-color: $third;
   padding: 0;
-  margin-left:100px;
+  margin:0;
+  border-bottom: 3px solid $second;
   h1 {
     color: $font-second;
     margin:0;
     padding: 10px 0px 10px 0px;
     text-align: center;
-    box-shadow: $shadow;
+    //box-shadow: $shadow;
   }
   nav {
     z-index: -1;
@@ -17,7 +18,7 @@ header {
     width:100px;
     padding:10px;
     height:100%;
-    background-color: $second;
+    background-color: $third;
     padding-top:60px;
     box-shadow: $shadow;
     ul {

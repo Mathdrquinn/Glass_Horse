@@ -12,11 +12,22 @@
   }
 }
 .swiper-container {
-  width: 500px;
+  //width: 500px;
   height: $carouselHeight;
   overflow: hidden;
   .swiper-slide {
     overflow: hidden;
+    .slide-title {
+      position: absolute;
+      bottom:10px;
+      right: 30px;
+      color: $font-second;
+      font-size: 36px;
+      text-shadow: 1px 1px 1px solid $font;
+    }
+    img {
+      width:100%;
+    }
   }
 }
 .label-container {
