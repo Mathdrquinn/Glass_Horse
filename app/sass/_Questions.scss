@@ -1,5 +1,47 @@
+#sub-nav {
+  margin: 0;
+  padding:0 1em;
+  list-style-type: none;
+}
+.sub-nav-item {
+  width: 125px;
+  text-align: center;
+  display: inline-block;
+}
+.sub-nav-item a {
+  width: 100%;
+  padding: 1.5em 0;
+  text-align: center;
+  display: inline-block;
+  color: $font;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,0);
+  transition: 0.2s;
+  &:hover {
+    border-bottom-color: $third;
+  }
+  &.active {
+    border-bottom-color:$third;
+  }
+}
+.option-group {
+  width:100%;
+  position: absolute;
+  display:none;
+}
+.option-group.show-group {
+  display:block;
+  position: relative;
+}
+.options-group {
+  width:100%;
+  display:none;
+}
+.options-group .option {
+  background-color: lightblue;
+}
+
 form {
-  height:225px;
   border: 1px solid lightgray;
   overflow:scroll;
 }

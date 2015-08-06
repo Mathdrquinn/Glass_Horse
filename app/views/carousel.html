@@ -43,289 +43,315 @@
 
 <!-- Begin Form -->
 <form action="">
-    <div class="label-container">
-        <label for="initialSlide">
-            Initial Slide
-            <br/>
-            <input id="initialSlide" type="number" ng-model="options.initialSlide" min="0" max="{{mySwiper.slidesGrid.length -3}}" ng-change="change()"/>
-        </label>
-    </div>
-    <div class="label-container">
-        <label>
-            Direction
-            <br/>
-            <input type="radio" ng-model="options.direction" value="vertical" ng-change="change()">
-            Vertical
-        </label>
-        <label>
-            <input type="radio" ng-model="options.direction" value="horizontal" ng-change="change()">
-            Horizontal
-        </label>
-    </div>
-    <div class="label-container">
-        <label for="speed">
-            Speed
-            <br/>
-            <input id="speed" type="number" ng-model="options.speed" value="300" ng-change="change()"/>
-        </label>
-    </div>
-    <div class="label-container">
-        <label for="loop">
-            Loop
-            <br/>
-            <select name="loop" id="loop" ng-model="options.loop" ng-change="change()">
-                <option value="1">True</option>
-                <option value="">False</option>
-            </select>
-        </label>
-    </div>
-    <div class="label-container">
-        <label for="autoplayDisableOnInteraction">
-            Disable Autoplay On Interaction
-            <br/>
-            <select name="autoplayDisableOnInteraction" id="autoplayDisableOnInteraction" ng-model="options.autoplayDisableOnInteraction" ng-change="change()">
-                <option value="1">Yes</option>
-                <option value="">No</option>
-            </select>
-        </label>
-    </div>
-    <div class="label-container">
-        <label for="watchSlidesProgress">
-            Watch Slides Progress
-            <br/>
-            <select name="watchSlidesProgress" id="watchSlidesProgress" ng-model="options.watchSlidesProgress" ng-change="change()">
-                <option value="1">Yes</option>
-                <option value="">No</option>
-            </select>
-        </label>
-    </div>
-    <div class="label-container">
-        <label for="freeMode">
-            Free Mode
-            <br/>
-            <select name="freeMode" id="freeMode" ng-model="options.freeMode" ng-change="change()">
-                <option value="1">Yes</option>
-                <option value="">No</option>
-            </select>
-        </label>
-    </div>
-    <div class="label-container">
-        <label for="freeModeMomentum">
-            Momentum
-            <br/>
-            <select name="freeModeMomentum" id="freeModeMomentum" ng-model="options.freeModeMomentum" ng-change="change()">
-                <option value="1">Yes</option>
-                <option value="">No</option>
-            </select>
-        </label>
-    </div>
-    <div class="label-container">
-        <label for="freeModeMomentumBounce">
-            Bounce
-            <br/>
-            <select name="freeModeMomentumBounce" id="freeModeMomentumBounce" ng-model="options.freeModeMomentumBounce" ng-change="change()">
-                <option value="1">Yes</option>
-                <option value="">No</option>
-            </select>
-        </label>
-    </div>
-    <div class="label-container">
-        <label for="freeModeSticky">
-            Sticky
-            <br/>
-            <select name="freeModeSticky" id="freeModeSticky" ng-model="options.freeModeSticky" ng-change="change()">
-                <option value="1">Yes</option>
-                <option value="">No</option>
-            </select>
-        </label>
-    </div>
-    <div class="label-container">
-        <label for="freeModeMomentumRatio">
-            Momentum Ratio
-            <br/>
-            <input id="freeModeMomentumRatio" type="number" ng-model="options.freeModeMomentumRatio" value="1" ng-change="change()"/>
-        </label>
-    </div>
-    <div class="label-container">
-        <label for="freeModeMomentumBounceRatio">
-            Bounce Ratio
-            <br/>
-            <input id="freeModeMomentumBounceRatio" type="number" ng-model="options.freeModeMomentumBounceRatio" value="1" ng-change="change()"/>
-        </label>
-    </div>
-    <!-- Begin Effect Type -->
-    <div class="label-container">
-        <label for="effect">
-            Effect Type
-            <br/>
-            <select name="effect" id="effect" ng-model="options.effect" ng-change="change()">
-                <option value="slide">Slide</option>
-                <option value="fade">Fade</option>
-                <option value="cube">Cube</option>
-                <option value="coverflow">Coverflow</option>
-            </select>
-        </label>
-        <!-- Begin Fade Options -->
-        <div class="label-container label-child" ng-show="options.effect === 'fade'">
-            <label for="crossFade">
-                Crossfade
-                <br/>
-                <select name="crossFade" id="crossFade" ng-model="options.fade.crossFade" ng-change="change()">
-                    <option value="1">Yes</option>
-                    <option value="">No</option>
-                </select>
-            </label>
-        </div>
-        <!-- End Fade Options -->
-        <!-- Begin Cube Options -->
-        <div class="label-container label-child" ng-show="options.effect === 'cube'">
-            <label for="slideShadows">
-                Slide Shadows
-                <br/>
-                <select name="slideShadows" id="slideShadows" ng-model="options.cube.slideShadows" ng-change="change()">
-                    <option value="1">Yes</option>
-                    <option value="">No</option>
-                </select>
-            </label>
-            <br/>
-            <label for="shadow">
-                Shadow
-                <br/>
-                <select name="shadow" id="shadow" ng-model="options.cube.shadow" ng-change="change()">
-                    <option value="1">Yes</option>
-                    <option value="">No</option>
-                </select>
-            </label>
-            <br/>
-            <label for="shadowOffset">
-                Shadow Offset
-                <br/>
-                <input id="shadowOffset" type="number" ng-model="options.cube.shadowOffset" min="0" max="1000" ng-change="change()"/>
-            </label>
-            <br/>
-            <label for="shadowScale">
-                Shadow Scale
-                <br/>
-                <input id="shadowScale" type="number" ng-model="options.cube.shadowScale" min="0" step="0.01" ng-change="change()"/>
-            </label>
-        </div>
-        <!-- End Cube Options -->
-        <!-- Begin Coverflow Options -->
-        <div class="label-container label-child" ng-show="options.effect === 'coverflow'">
-            <label for="rotate">
-                Rotate
-                <br/>
-                <input id="rotate" type="number" ng-model="options.coverflow.rotate" min="0" ng-change="change()"/>
-            </label>
-            <label for="stretch">
-                Stretch
-                <br/>
-                <input id="stretch" type="number" ng-model="options.coverflow.stretch" min="0" ng-change="change()"/>
-            </label>
-            <label for="depth">
-                Depth
-                <br/>
-                <input id="depth" type="number" ng-model="options.coverflow.depth" min="0" ng-change="change()"/>
-            </label>
-            <label for="modifier">
-                Modifier
-                <br/>
-                <input id="modifier" type="number" ng-model="options.coverflow.modifier" min="0" ng-change="change()"/>
-            </label>
-            <label for="slideShows">
-                Slide Show
-                <br/>
-                <select name="slideShows" id="slideShows" ng-model="options.coverflow.slideShows" ng-change="change()">
-                    <option value="1">Yes</option>
-                    <option value="">No</option>
-                </select>
-            </label>
-        </div>
-        <!-- End Coverflow Options -->
-    </div>
-    <!-- End Effect Type -->
-    <div class="label-container">
-        <label for="parallax">
-            Parallax
-            <br/>
-            <select name="parallax" id="parallax" ng-model="options.parallax" ng-change="change()">
-                <option value="1">Yes</option>
-                <option value="">No</option>
-            </select>
-        </label>
-    </div>
-    <div class="label-container">
-        <label for="spaceBetween">
-            Space Between
-            <br/>
-            <input type="number" id="spaceBetween" name="spaceBetween" ng-model="options.spaceBetween" step="1" ng-change="change()" />
-        </label>
-    </div>
-    <div class="label-container">
-        <label for="slidesPerView">
-            Slides In View
-            <br/>
-            <input type="number" id="slidesPerView" name="slidesPerView" ng-model="options.slidesPerView" step="1" min="1" max="10" ng-change="change()" />
-        </label>
-    </div>
-    <div class="label-container">
-        <label for="slidesPerColumn">
-            Slides Per Column
-            <br/>
-            <input type="number" id="slidesPerColumn" name="slidesPerColumn" ng-model="options.slidesPerColumn" step="1" min="1" max="10" ng-change="change()" />
-        </label>
-    </div>
-    <div class="label-container">
-        <label for="slidesPerColumnFill">
-            Slides Per Column Fill
-            <br/>
-            <select name="slidesPerColumnFill" id="slidesPerColumnFill" ng-model="options.slidesPerColumnFill" ng-change="change()">
-                <option value="column">Column</option>
-                <option value="row">Row</option>
-            </select>
-        </label>
-    </div>
-    <div class="label-container">
-        <label for="slidesPerGroup">
-            Slides Per Group
-            <br/>
-            <input type="number" id="slidesPerGroup" name="slidesPerGroup" ng-model="options.slidesPerGroup"/>
-        </label>
-    </div>
-    <div class="label-container">
-        <label for="centeredSlides">
-            Center Your Slides?
-            <br/>
-            <select name="centeredSlides" id="centeredSlides" ng-model="options.centeredSlides" ng-change="change()">
-                <option value="1">True</option>
-                <option value="">False</option>
-            </select>
-        </label>
-    </div>
-    <div class="label-container">
-        <label for="slidesOffsetBefore">
-            Slides Offset Before
-            <br/>
-            <input type="number" id="slidesOffsetBefore" name="slidesOffsetBefore" ng-model="options.slidesOffsetBefore" ng-change="change()"/>
-        </label>
-    </div>
-    <div class="label-container">
-        <label for="slidesOffsetAfter">
-            Slides Offset After
-            <br/>
-            <input type="number" id="slidesOffsetAfter" name="slidesOffsetAfter" ng-model="options.slidesOffsetAfter" ng-change="change()"/>
-        </label>
-    </div>
-    <div class="label-container">
-        <label for="grabCursor">
-            Would you like a Grab Cursor?
-            <br/>
-            <select name="grabCursor" id="grabCursor" ng-model="options.grabCursor" ng-change="change()">
-                <option value="1">Yes</option>
-                <option value="">No</option>
-            </select>
-        </label>
-    </div>
-    <br/>
+    <ul id="sub-nav">
+        <li class="sub-nav-item">
+            <a href=""  data-group="General" >General</a>
+            <!--<ul class="options-group">-->
+                <!--<li class="option">Thing 1</li>-->
+                <!--<li class="option">Thing 2</li>-->
+                <!--<li class="option">thing 3</li>-->
+                <!--<li class="option">Thing 4</li>-->
+            <!--</ul>-->
+        </li>
+        <li class="sub-nav-item"><a href="" data-group="FreeMode" active>Free Mode</a></li>
+        <li class="sub-nav-item"><a href="" data-group="Effect" >Effect</a></li>
+        <li class="sub-nav-item"><a href="" data-group="Spacing" >Spacing/Grouping</a></li>
+        <li class="sub-nav-item"><a href="" data-group="Touch">Touch</a></li>
+        <li class="sub-nav-item"><a href="" data-group="Other" >Other</a></li>
+    </ul>
+    <ul id="Options Groupings">
+        <li id="General" class="option-group">
+            <div class="label-container">
+                <label for="initialSlide">
+                    Initial Slide
+                    <br/>
+                    <input id="initialSlide" type="number" ng-model="options.initialSlide" min="0" max="{{mySwiper.slidesGrid.length -3}}" ng-change="change()"/>
+                </label>
+            </div>
+            <div class="label-container">
+                <label>
+                    Direction
+                    <br/>
+                    <input type="radio" ng-model="options.direction" value="vertical" ng-change="change()">
+                    Vertical
+                </label>
+                <label>
+                    <input type="radio" ng-model="options.direction" value="horizontal" ng-change="change()">
+                    Horizontal
+                </label>
+            </div>
+            <div class="label-container">
+                <label for="speed">
+                    Speed
+                    <br/>
+                    <input id="speed" type="number" ng-model="options.speed" value="300" ng-change="change()"/>
+                </label>
+            </div>
+            <div class="label-container">
+                <label for="loop">
+                    Loop
+                    <br/>
+                    <select name="loop" id="loop" ng-model="options.loop" ng-change="change()">
+                        <option value="1">True</option>
+                        <option value="">False</option>
+                    </select>
+                </label>
+            </div>
+            <div class="label-container">
+                <label for="autoplayDisableOnInteraction">
+                    Disable Autoplay On Interaction
+                    <br/>
+                    <select name="autoplayDisableOnInteraction" id="autoplayDisableOnInteraction" ng-model="options.autoplayDisableOnInteraction" ng-change="change()">
+                        <option value="1">Yes</option>
+                        <option value="">No</option>
+                    </select>
+                </label>
+            </div>
+            <div class="label-container">
+                <label for="watchSlidesProgress">
+                    Watch Slides Progress
+                    <br/>
+                    <select name="watchSlidesProgress" id="watchSlidesProgress" ng-model="options.watchSlidesProgress" ng-change="change()">
+                        <option value="1">Yes</option>
+                        <option value="">No</option>
+                    </select>
+                </label>
+            </div>
+        </li>
+        <li id="FreeMode" class="option-group">
+            <div class="label-container">
+                <label for="freeMode">
+                    Free Mode
+                    <br/>
+                    <select name="freeMode" id="freeMode" ng-model="options.freeMode" ng-change="change()">
+                        <option value="1">Yes</option>
+                        <option value="">No</option>
+                    </select>
+                </label>
+            </div>
+            <div class="label-container">
+                <label for="freeModeMomentum">
+                    Momentum
+                    <br/>
+                    <select name="freeModeMomentum" id="freeModeMomentum" ng-model="options.freeModeMomentum" ng-change="change()">
+                        <option value="1">Yes</option>
+                        <option value="">No</option>
+                    </select>
+                </label>
+            </div>
+            <div class="label-container">
+                <label for="freeModeMomentumBounce">
+                    Bounce
+                    <br/>
+                    <select name="freeModeMomentumBounce" id="freeModeMomentumBounce" ng-model="options.freeModeMomentumBounce" ng-change="change()">
+                        <option value="1">Yes</option>
+                        <option value="">No</option>
+                    </select>
+                </label>
+            </div>
+            <div class="label-container">
+                <label for="freeModeSticky">
+                    Sticky
+                    <br/>
+                    <select name="freeModeSticky" id="freeModeSticky" ng-model="options.freeModeSticky" ng-change="change()">
+                        <option value="1">Yes</option>
+                        <option value="">No</option>
+                    </select>
+                </label>
+            </div>
+            <div class="label-container">
+                <label for="freeModeMomentumRatio">
+                    Momentum Ratio
+                    <br/>
+                    <input id="freeModeMomentumRatio" type="number" ng-model="options.freeModeMomentumRatio" value="1" ng-change="change()"/>
+                </label>
+            </div>
+            <div class="label-container">
+                <label for="freeModeMomentumBounceRatio">
+                    Bounce Ratio
+                    <br/>
+                    <input id="freeModeMomentumBounceRatio" type="number" ng-model="options.freeModeMomentumBounceRatio" value="1" ng-change="change()"/>
+                </label>
+            </div>
+        </li>
+        <li id="Effect" class="option-group">
+            <!-- Begin Effect Type -->
+            <div class="label-container">
+                <label for="effect">
+                    Effect Type
+                    <br/>
+                    <select name="effect" id="effect" ng-model="options.effect" ng-change="change()">
+                        <option value="slide">Slide</option>
+                        <option value="fade">Fade</option>
+                        <option value="cube">Cube</option>
+                        <option value="coverflow">Coverflow</option>
+                    </select>
+                </label>
+                <!-- Begin Fade Options -->
+                <div class="label-container label-child" ng-show="options.effect === 'fade'">
+                    <label for="crossFade">
+                        Crossfade
+                        <br/>
+                        <select name="crossFade" id="crossFade" ng-model="options.fade.crossFade" ng-change="change()">
+                            <option value="1">Yes</option>
+                            <option value="">No</option>
+                        </select>
+                    </label>
+                </div>
+                <!-- End Fade Options -->
+                <!-- Begin Cube Options -->
+                <div class="label-container label-child" ng-show="options.effect === 'cube'">
+                    <label for="slideShadows">
+                        Slide Shadows
+                        <br/>
+                        <select name="slideShadows" id="slideShadows" ng-model="options.cube.slideShadows" ng-change="change()">
+                            <option value="1">Yes</option>
+                            <option value="">No</option>
+                        </select>
+                    </label>
+                    <br/>
+                    <label for="shadow">
+                        Shadow
+                        <br/>
+                        <select name="shadow" id="shadow" ng-model="options.cube.shadow" ng-change="change()">
+                            <option value="1">Yes</option>
+                            <option value="">No</option>
+                        </select>
+                    </label>
+                    <br/>
+                    <label for="shadowOffset">
+                        Shadow Offset
+                        <br/>
+                        <input id="shadowOffset" type="number" ng-model="options.cube.shadowOffset" min="0" max="1000" ng-change="change()"/>
+                    </label>
+                    <br/>
+                    <label for="shadowScale">
+                        Shadow Scale
+                        <br/>
+                        <input id="shadowScale" type="number" ng-model="options.cube.shadowScale" min="0" step="0.01" ng-change="change()"/>
+                    </label>
+                </div>
+                <!-- End Cube Options -->
+                <!-- Begin Coverflow Options -->
+                <div class="label-container label-child" ng-show="options.effect === 'coverflow'">
+                    <label for="rotate">
+                        Rotate
+                        <br/>
+                        <input id="rotate" type="number" ng-model="options.coverflow.rotate" min="0" ng-change="change()"/>
+                    </label>
+                    <label for="stretch">
+                        Stretch
+                        <br/>
+                        <input id="stretch" type="number" ng-model="options.coverflow.stretch" min="0" ng-change="change()"/>
+                    </label>
+                    <label for="depth">
+                        Depth
+                        <br/>
+                        <input id="depth" type="number" ng-model="options.coverflow.depth" min="0" ng-change="change()"/>
+                    </label>
+                    <label for="modifier">
+                        Modifier
+                        <br/>
+                        <input id="modifier" type="number" ng-model="options.coverflow.modifier" min="0" ng-change="change()"/>
+                    </label>
+                    <label for="slideShows">
+                        Slide Show
+                        <br/>
+                        <select name="slideShows" id="slideShows" ng-model="options.coverflow.slideShows" ng-change="change()">
+                            <option value="1">Yes</option>
+                            <option value="">No</option>
+                        </select>
+                    </label>
+                </div>
+                <!-- End Coverflow Options -->
+            </div>
+            <!-- End Effect Type -->
+        </li>
+        <li id="Spacing" class="option-group">
+            <div class="label-container">
+                <label for="parallax">
+                    Parallax
+                    <br/>
+                    <select name="parallax" id="parallax" ng-model="options.parallax" ng-change="change()">
+                        <option value="1">Yes</option>
+                        <option value="">No</option>
+                    </select>
+                </label>
+            </div>
+            <div class="label-container">
+                <label for="spaceBetween">
+                    Space Between
+                    <br/>
+                    <input type="number" id="spaceBetween" name="spaceBetween" ng-model="options.spaceBetween" step="1" ng-change="change()" />
+                </label>
+            </div>
+            <div class="label-container">
+                <label for="slidesPerView">
+                    Slides In View
+                    <br/>
+                    <input type="number" id="slidesPerView" name="slidesPerView" ng-model="options.slidesPerView" step="1" min="1" max="10" ng-change="change()" />
+                </label>
+            </div>
+            <div class="label-container">
+                <label for="slidesPerColumn">
+                    Slides Per Column
+                    <br/>
+                    <input type="number" id="slidesPerColumn" name="slidesPerColumn" ng-model="options.slidesPerColumn" step="1" min="1" max="10" ng-change="change()" />
+                </label>
+            </div>
+            <div class="label-container">
+                <label for="slidesPerColumnFill">
+                    Slides Per Column Fill
+                    <br/>
+                    <select name="slidesPerColumnFill" id="slidesPerColumnFill" ng-model="options.slidesPerColumnFill" ng-change="change()">
+                        <option value="column">Column</option>
+                        <option value="row">Row</option>
+                    </select>
+                </label>
+            </div>
+            <div class="label-container">
+                <label for="slidesPerGroup">
+                    Slides Per Group
+                    <br/>
+                    <input type="number" id="slidesPerGroup" name="slidesPerGroup" ng-model="options.slidesPerGroup"/>
+                </label>
+            </div>
+            <div class="label-container">
+                <label for="centeredSlides">
+                    Center Your Slides?
+                    <br/>
+                    <select name="centeredSlides" id="centeredSlides" ng-model="options.centeredSlides" ng-change="change()">
+                        <option value="1">True</option>
+                        <option value="">False</option>
+                    </select>
+                </label>
+            </div>
+            <div class="label-container">
+                <label for="slidesOffsetBefore">
+                    Slides Offset Before
+                    <br/>
+                    <input type="number" id="slidesOffsetBefore" name="slidesOffsetBefore" ng-model="options.slidesOffsetBefore" ng-change="change()"/>
+                </label>
+            </div>
+            <div class="label-container">
+                <label for="slidesOffsetAfter">
+                    Slides Offset After
+                    <br/>
+                    <input type="number" id="slidesOffsetAfter" name="slidesOffsetAfter" ng-model="options.slidesOffsetAfter" ng-change="change()"/>
+                </label>
+            </div>
+            <div class="label-container">
+                <label for="grabCursor">
+                    Would you like a Grab Cursor?
+                    <br/>
+                    <select name="grabCursor" id="grabCursor" ng-model="options.grabCursor" ng-change="change()">
+                        <option value="1">Yes</option>
+                        <option value="">No</option>
+                    </select>
+                </label>
+            </div>
+        </li>
+        <li id="Other" class="option-group"></li>
+    </ul>
 </form>
 <!-- End Form -->

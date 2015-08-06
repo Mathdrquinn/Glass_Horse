@@ -255,6 +255,19 @@
 
             }
 
+            //Event Listeners
+            $('#sub-nav').on('click', 'a', function(e) {
+                e.preventDefault();
+                console.log('nav click')
+                var $this = $(this);
+                var group = $this.data('group');
+                $('.sub-nav-item a').removeClass('active');
+                $this.addClass('active');
+                $('.show-group').removeClass('show-group');
+                $('#' + group).addClass('show-group')
+
+            })
+
             ////Broadcasting Filters
             //$scope.search = {name:''};
             //$scope.yell = function (word) {

@@ -9,6 +9,12 @@ body * {
   font-family: 'Abel', sans-serif;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -1281,20 +1287,20 @@ h1, h2, h3, h4, h5, h6 {
 
 #content {
   width: 100%;
-  height: auto;
+  height: 400px;
   overflow: hidden;
 }
 
 .pending {
   text-align: center;
-  height: auto;
+  height: 400px;
 }
 .pending img {
   height: 100%;
 }
 
 .swiper-container {
-  height: auto;
+  height: 400px;
   overflow: hidden;
 }
 .swiper-container .swiper-slide {
@@ -1306,7 +1312,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 30px;
   color: #fffef9;
   font-size: 36px;
-  text-shadow: 1px 1px 1px solid #18121F;
+  text-shadow: 1px 2px #18121F;
 }
 .swiper-container .swiper-slide img {
   width: 100%;
@@ -1826,8 +1832,57 @@ button.swiper-pagination-bullet {
             transform: rotate(360deg);
   }
 }
+#sub-nav {
+  margin: 0;
+  padding: 0 1em;
+  list-style-type: none;
+}
+
+.sub-nav-item {
+  width: 125px;
+  text-align: center;
+  display: inline-block;
+}
+
+.sub-nav-item a {
+  width: 100%;
+  padding: 1.5em 0;
+  text-align: center;
+  display: inline-block;
+  color: #18121F;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: 0.2s;
+          transition: 0.2s;
+}
+.sub-nav-item a:hover {
+  border-bottom-color: #BD4932;
+}
+.sub-nav-item a.active {
+  border-bottom-color: #BD4932;
+}
+
+.option-group {
+  width: 100%;
+  position: absolute;
+  display: none;
+}
+
+.option-group.show-group {
+  display: block;
+  position: relative;
+}
+
+.options-group {
+  width: 100%;
+  display: none;
+}
+
+.options-group .option {
+  background-color: lightblue;
+}
+
 form {
-  height: 225px;
   border: 1px solid lightgray;
   overflow: scroll;
 }
