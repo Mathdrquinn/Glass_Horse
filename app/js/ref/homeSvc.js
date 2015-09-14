@@ -2,7 +2,7 @@
     "use strict";
 
     angular
-        .module('CarouselApp')
+        .module('carouselApp')
         .factory('homeSvc', ['$http', '$rootScope', function ($http, $rootScope) {
 
             // public service methods

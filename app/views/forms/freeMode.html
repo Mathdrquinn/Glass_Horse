@@ -1,0 +1,56 @@
+<li id="FreeMode" class="option-group">
+    <div class="label-container">
+        <label for="freeMode">
+            Free Mode
+            <br/>
+            <select name="freeMode" id="freeMode" ng-model="options.freeMode" ng-change="change()">
+                <option value="1">Yes</option>
+                <option value="">No</option>
+            </select>
+        </label>
+    </div>
+    <div class="label-container">
+        <label for="freeModeMomentum">
+            Momentum
+            <br/>
+            <select name="freeModeMomentum" id="freeModeMomentum" ng-model="options.freeModeMomentum" ng-change="change()">
+                <option value="1">Yes</option>
+                <option value="">No</option>
+            </select>
+        </label>
+    </div>
+    <div class="label-container">
+        <label for="freeModeMomentumBounce">
+            Bounce
+            <br/>
+            <select name="freeModeMomentumBounce" id="freeModeMomentumBounce" ng-model="options.freeModeMomentumBounce" ng-change="change()">
+                <option value="1">Yes</option>
+                <option value="">No</option>
+            </select>
+        </label>
+    </div>
+    <div class="label-container">
+        <label for="freeModeSticky">
+            Sticky
+            <br/>
+            <select name="freeModeSticky" id="freeModeSticky" ng-model="options.freeModeSticky" ng-change="change()">
+                <option value="1">Yes</option>
+                <option value="">No</option>
+            </select>
+        </label>
+    </div>
+    <div class="label-container">
+        <label for="freeModeMomentumRatio">
+            Momentum Ratio
+            <br/>
+            <input id="freeModeMomentumRatio" type="number" ng-model="options.freeModeMomentumRatio" value="1" ng-change="change()"/>
+        </label>
+    </div>
+    <div class="label-container">
+        <label for="freeModeMomentumBounceRatio">
+            Bounce Ratio
+            <br/>
+            <input id="freeModeMomentumBounceRatio" type="number" ng-model="options.freeModeMomentumBounceRatio" value="1" ng-change="change()"/>
+        </label>
+    </div>
+</li>

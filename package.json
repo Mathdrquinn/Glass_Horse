@@ -8,7 +8,7 @@
   },
   "keywords": [
     "Angular",
-    "Carousel",
+    "Carousel"
   ],
   "author": "Brendan Quinn (bquinn@sriservices.com",
   "license": "MIT",
@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "angular": "^1.4.1",
+    "angular-animate": "^1.4.5",
     "angular-resource": "^1.4.1",
     "angularfire": "^1.1.1",
     "foundation-grid": "^0.1.0",

@@ -1,6 +1,4 @@
-<h3>{{works}}</h3>
-
-<form action="">
+<li id="General" class="option-group">
     <div class="label-container">
         <label for="initialSlide">
             Initial Slide
@@ -37,39 +35,24 @@
             </select>
         </label>
     </div>
-    <br/>
-</form>
-
-<h4>Carousel</h4>
-<!-- Email View-->
-<div id="content">
-    <div class="swiper-outer-container">
-        <div class="swiper-container">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                    Slide 1 <br />
-                    <img src="images/300.jpeg" alt="Placebear" />
-                </div>
-                <div class="swiper-slide">
-                    Slide 2 Change <br />
-                    <img src="images/300 (1).jpeg" alt="Placebear" />
-                </div>
-                <div class="swiper-slide">
-                    Slide 3  <br />
-                    <img src="images/301.jpeg" alt="Placebear" />
-                </div>
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-
-            <!-- If we need scrollbar -->
-            <!--<div class="swiper-scrollbar"></div>-->
-        </div>
+    <div class="label-container">
+        <label for="autoplayDisableOnInteraction">
+            Disable Autoplay On Interaction
+            <br/>
+            <select name="autoplayDisableOnInteraction" id="autoplayDisableOnInteraction" ng-model="options.autoplayDisableOnInteraction" ng-change="change()">
+                <option value="1">Yes</option>
+                <option value="">No</option>
+            </select>
+        </label>
     </div>
-</div>
+    <div class="label-container">
+        <label for="watchSlidesProgress">
+            Watch Slides Progress
+            <br/>
+            <select name="watchSlidesProgress" id="watchSlidesProgress" ng-model="options.watchSlidesProgress" ng-change="change()">
+                <option value="1">Yes</option>
+                <option value="">No</option>
+            </select>
+        </label>
+    </div>
+</li>

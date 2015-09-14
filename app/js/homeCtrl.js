@@ -1,14 +1,13 @@
 (function () {
     "use strict";
 
-    angular
-        .module('CarouselApp')
-        .controller('homeCtrl',['$scope', '$filter', '$firebaseArray', 'homeSvc', function ($scope, $filter, $firebaseArray, homeSvc) {
+    carouselApp.controller('homeCtrl',['$scope', '$filter', '$firebaseArray', 
+      function ($scope, $filter, $firebaseArray) {
 
-            $scope.works = 'Home Ctrl is here';
-            $scope.test = 'working';
+        $scope.works = 'Home Ctrl is here';
+        $scope.test = 'working';
 
-        }]);
+      }]);
 
 
 })();

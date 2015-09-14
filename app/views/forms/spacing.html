@@ -1,0 +1,84 @@
+<li id="Spacing" class="option-group">
+    <div class="label-container">
+        <label for="parallax">
+            Parallax
+            <br/>
+            <select name="parallax" id="parallax" ng-model="options.parallax" ng-change="change()">
+                <option value="1">Yes</option>
+                <option value="">No</option>
+            </select>
+        </label>
+    </div>
+    <div class="label-container">
+        <label for="spaceBetween">
+            Space Between
+            <br/>
+            <input type="number" id="spaceBetween" name="spaceBetween" ng-model="options.spaceBetween" step="1" ng-change="change()" />
+        </label>
+    </div>
+    <div class="label-container">
+        <label for="slidesPerView">
+            Slides In View
+            <br/>
+            <input type="number" id="slidesPerView" name="slidesPerView" ng-model="options.slidesPerView" step="1" min="1" max="10" ng-change="change()" />
+        </label>
+    </div>
+    <div class="label-container">
+        <label for="slidesPerColumn">
+            Slides Per Column
+            <br/>
+            <input type="number" id="slidesPerColumn" name="slidesPerColumn" ng-model="options.slidesPerColumn" step="1" min="1" max="10" ng-change="change()" />
+        </label>
+    </div>
+    <div class="label-container">
+        <label for="slidesPerColumnFill">
+            Slides Per Column Fill
+            <br/>
+            <select name="slidesPerColumnFill" id="slidesPerColumnFill" ng-model="options.slidesPerColumnFill" ng-change="change()">
+                <option value="column">Column</option>
+                <option value="row">Row</option>
+            </select>
+        </label>
+    </div>
+    <div class="label-container">
+        <label for="slidesPerGroup">
+            Slides Per Group
+            <br/>
+            <input type="number" id="slidesPerGroup" name="slidesPerGroup" ng-model="options.slidesPerGroup"/>
+        </label>
+    </div>
+    <div class="label-container">
+        <label for="centeredSlides">
+            Center Your Slides?
+            <br/>
+            <select name="centeredSlides" id="centeredSlides" ng-model="options.centeredSlides" ng-change="change()">
+                <option value="1">True</option>
+                <option value="">False</option>
+            </select>
+        </label>
+    </div>
+    <div class="label-container">
+        <label for="slidesOffsetBefore">
+            Slides Offset Before
+            <br/>
+            <input type="number" id="slidesOffsetBefore" name="slidesOffsetBefore" ng-model="options.slidesOffsetBefore" ng-change="change()"/>
+        </label>
+    </div>
+    <div class="label-container">
+        <label for="slidesOffsetAfter">
+            Slides Offset After
+            <br/>
+            <input type="number" id="slidesOffsetAfter" name="slidesOffsetAfter" ng-model="options.slidesOffsetAfter" ng-change="change()"/>
+        </label>
+    </div>
+    <div class="label-container">
+        <label for="grabCursor">
+            Would you like a Grab Cursor?
+            <br/>
+            <select name="grabCursor" id="grabCursor" ng-model="options.grabCursor" ng-change="change()">
+                <option value="1">Yes</option>
+                <option value="">No</option>
+            </select>
+        </label>
+    </div>
+</li>

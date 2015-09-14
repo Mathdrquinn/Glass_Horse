@@ -1,18 +1,25 @@
 $carouselWidth: 500px;
-$carouselHeight: 315px;
+$carouselHeight: 400px;
 $main: #ffd34e;
 $second: #105b63;
 $third: #BD4932;
 $font: #18121F;
-$font-second: #fffad5;
+$font-second: lighten(#fffad5,7%);
 $shadow:5px 2px 4px rgba(0,0,0,0.4);
 
 html, body {
   margin:0;
   padding:0;
+  background-color: $font-second;
 }
 body * {
   color: $font;
+  font-family: 'Abel', sans-serif;
+}
+ul {
+  margin:0;
+  padding:0;
+  list-style-type: none;
 }
 
 @import "Grid";

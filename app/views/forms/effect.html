@@ -1,0 +1,93 @@
+<li id="Effect" class="option-group">
+    <!-- Begin Effect Type -->
+    <div class="label-container">
+        <label for="effect">
+            Effect Type
+            <br/>
+            <select name="effect" id="effect" ng-model="options.effect" ng-change="change()">
+                <option value="slide">Slide</option>
+                <option value="fade">Fade</option>
+                <option value="cube">Cube</option>
+                <option value="coverflow">Coverflow</option>
+            </select>
+        </label>
+        <!-- Begin Fade Options -->
+        <div class="label-container label-child" ng-show="options.effect === 'fade'">
+            <label for="crossFade">
+                Crossfade
+                <br/>
+                <select name="crossFade" id="crossFade" ng-model="options.fade.crossFade" ng-change="change()">
+                    <option value="1">Yes</option>
+                    <option value="">No</option>
+                </select>
+            </label>
+        </div>
+        <!-- End Fade Options -->
+        <!-- Begin Cube Options -->
+        <div class="label-container label-child" ng-show="options.effect === 'cube'">
+            <label for="slideShadows">
+                Slide Shadows
+                <br/>
+                <select name="slideShadows" id="slideShadows" ng-model="options.cube.slideShadows" ng-change="change()">
+                    <option value="1">Yes</option>
+                    <option value="">No</option>
+                </select>
+            </label>
+            <br/>
+            <label for="shadow">
+                Shadow
+                <br/>
+                <select name="shadow" id="shadow" ng-model="options.cube.shadow" ng-change="change()">
+                    <option value="1">Yes</option>
+                    <option value="">No</option>
+                </select>
+            </label>
+            <br/>
+            <label for="shadowOffset">
+                Shadow Offset
+                <br/>
+                <input id="shadowOffset" type="number" ng-model="options.cube.shadowOffset" min="0" max="1000" ng-change="change()"/>
+            </label>
+            <br/>
+            <label for="shadowScale">
+                Shadow Scale
+                <br/>
+                <input id="shadowScale" type="number" ng-model="options.cube.shadowScale" min="0" step="0.01" ng-change="change()"/>
+            </label>
+        </div>
+        <!-- End Cube Options -->
+        <!-- Begin Coverflow Options -->
+        <div class="label-container label-child" ng-show="options.effect === 'coverflow'">
+            <label for="rotate">
+                Rotate
+                <br/>
+                <input id="rotate" type="number" ng-model="options.coverflow.rotate" min="0" ng-change="change()"/>
+            </label>
+            <label for="stretch">
+                Stretch
+                <br/>
+                <input id="stretch" type="number" ng-model="options.coverflow.stretch" min="0" ng-change="change()"/>
+            </label>
+            <label for="depth">
+                Depth
+                <br/>
+                <input id="depth" type="number" ng-model="options.coverflow.depth" min="0" ng-change="change()"/>
+            </label>
+            <label for="modifier">
+                Modifier
+                <br/>
+                <input id="modifier" type="number" ng-model="options.coverflow.modifier" min="0" ng-change="change()"/>
+            </label>
+            <label for="slideShows">
+                Slide Show
+                <br/>
+                <select name="slideShows" id="slideShows" ng-model="options.coverflow.slideShows" ng-change="change()">
+                    <option value="1">Yes</option>
+                    <option value="">No</option>
+                </select>
+            </label>
+        </div>
+        <!-- End Coverflow Options -->
+    </div>
+    <!-- End Effect Type -->
+</li>
