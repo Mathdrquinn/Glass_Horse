@@ -1,17 +1,16 @@
 {
   "name": "OCDirectory",
   "version": "1.0.0",
-  "description": "OC Marketing Directory",
+  "description": "Angualr Carousel Generator",
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "Angular",
-    "Marketing",
-    "Directory"
+    "Carousel",
   ],
-  "author": "Brendan Quinn (bquinn@oneclickventures.com) and Austin Woodall (austinwoodall@gmail.com)",
+  "author": "Brendan Quinn (bquinn@sriservices.com",
   "license": "MIT",
   "devDependencies": {
     "connect-livereload": "^0.5.3",
