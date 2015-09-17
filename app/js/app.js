@@ -40,47 +40,47 @@ angular
         }
       }
     })
-    .state('main.home.freemode', {
-      parent: 'main.home',
+    .state('main.freemode', {
+      parent: 'main',
       url: '',
       views: {
-        'options@main.home': {
+        'options@main': {
           templateUrl: 'views/carousel/options/freeMode.html'
         }
       }
     })
-    .state('main.home.effect', {
-      parent: 'main.home',
+    .state('main.effect', {
+      parent: 'main',
       url: '',
       views: {
-        'options@main.home': {
+        'options@main': {
           templateUrl: 'views/carousel/options/effect.html'
         }
       }
     })
-    .state('main.home.spacing', {
-      parent: 'main.home',
+    .state('main.spacing', {
+      parent: 'main',
       url: '',
       views: {
-        'options@main.home': {
+        'options@main': {
           templateUrl: 'views/carousel/options/spacing.html'
         }
       }
     })
-    .state('main.home.touch', {
-      parent: 'main.home',
+    .state('main.touch', {
+      parent: 'main',
       url: '',
       views: {
-        'options@main.home': {
+        'options@main': {
           templateUrl: 'views/carousel/options/touch.html'
         }
       }
     })
-    .state('main.home.other', {
-      parent: 'main.home',
+    .state('main.other', {
+      parent: 'main',
       url: '',
       views: {
-        'options@main.home': {
+        'options@main': {
           templateUrl: 'views/carousel/options/other.html'
         }
       }

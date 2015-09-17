@@ -101,81 +101,110 @@
                 centeredSlides: '',
                 slidesOffsetBefore: 0,
                 slidesOffsetAfter: 0,
-                grabCursor: ''
-
+                grabCursor: '',
+                touchRatio: 1,
+                touchAngle: 45,
+                stimulateTouch: '1',
+                shortSwipes: '1',
+                longSwipes: '1',
+                longSwipesRatio: 0.5,
+                followFinger: '1',
+                onlyExternal: '',
+                threshold: 0,
+                touchMoveStopPropagation: '1',
+                resistance: '1',
+                resistanceRatio: 0.85,
+                preventClicks: '1',
+                preventClicksPropagation: '1',
+                slideToClickedSlide: '',
+                allowSwipeToPrev: '1',
+                allowSwipeToNext: '1',
+                noSwiping: '1',
             };
+
+            $scope.cleanOptions = function (options) {
+              return {
+                  initialSlide: options.initialSlide,
+                  direction: options.direction,
+                  speed: options.speed,
+                  loop: Boolean(options.loop),
+                  //setWrapperSize: options.setWrapperSize,
+                  //width: options.width,
+                  //height: options.height,
+                  // Boolean deafult: true
+                  autoplayDisableOnInteraction: Boolean(options.autoplayDisableOnInteraction),
+                  watchSlidesProgress: Boolean(options.watchSlidesProgress),
+                  freeMode: Boolean(options.freeMode),
+                  freeModeMomentum: Boolean(options.freeModeMomentum),
+                  freeModeMomentumBounce: Boolean(options.freeModeMomentumBounce),
+                  freeModeSticky: Boolean(options.freeModeSticky),
+                  freeModeMomentumRatio: options.freeModeMomentumRatio,
+                  freeModeMomentumBounceRatio: options.freeModeMomentumBounceRatio,
+                  effect: options.effect,
+                  fade: {
+                      crossFade: Boolean(options.fade.crossFade)
+                  },
+                  cube: {
+                      slideShadows: Boolean(options.cube.slideShadows),
+                      shadow: Boolean(options.cube.shadow),
+                      shadowOffset: options.cube.shadowOffset,
+                      shadowScale: options.cube.shadowScale
+                  },
+                  coverflow: {
+                      rotate: options.coverflow.rotate,
+                      stretch: options.coverflow.stretch,
+                      depth: options.coverflow.depth,
+                      modifier: options.coverflow.modifier,
+                      slideShows: Boolean(options.coverflow.slideShows)
+                  },
+                  parallax: Boolean(options.parallax),
+                  spaceBetween: options.spaceBetween,
+                  slidesPerView: options.slidesPerView,
+                  slidesPerColumn: options.slidesPerColumn,
+                  slidesPerColumnFill: options.slidesPerColumnFill,
+                  slidesPerGroup: options.slidesPerGroup,
+                  centeredSlides: Boolean(options.centeredSlides),
+                  slidesOffsetBefore: options.slidesOffsetBefore,
+                  slidesOffsetAfter: options.slidesOffsetAfter,
+                  grabCursor: Boolean(options.grabCursor),
+                  touchRatio: Boolean(options.touchRatio),
+                  touchAngle: options.touchAngle,
+                  stimulateTouch: Boolean(options.stimulateTouch),
+                  shortSwipes: Boolean(options.shortSwipes),
+                  longSwipes: Boolean(options.longSwipes),
+                  longSwipesRatio: options.longSwipesRatio,
+                  followFinger: Boolean(options.followFinger),
+                  onlyExternal: Boolean(options.onlyExternal),
+                  threshold: options.threshold,
+                  touchMoveStopPropagation: Boolean(options.touchMoveStopPropagation),
+                  resistance: Boolean(options.resistance),
+                  resistanceRatio: options.resistanceRatio,
+                  preventClicks: Boolean(options.preventClicks),
+                  preventClicksPropagation: Boolean(options.ClicksPropagation),
+                  slideToClickedSlide: Boolean(options.slideToClickedSlide),
+                  allowSwipeToPrev: Boolean(options.allowSwipeToPrev),
+                  allowSwipeToNext: Boolean(options.allowSwipeToNext),
+                  noSwiping: Boolean(options.noSwiping),
+
+                  // If we need pagination
+                  pagination: '.swiper-pagination',
+                  paginationClickable: Boolean(options.paginationClickable),
+
+                  // Navigation arrows
+                  nextButton: '.swiper-button-next',
+                  prevButton: '.swiper-button-prev'
+
+                  // And if we need scrollbar
+                  //scrollbar: '.swiper-scrollbar',
+              };
+            }
 
             //Show Options
             console.log('options')
             console.log($scope.options);
 
             // Initialize Swiper
-            $scope.mySwiper = new Swiper ('.swiper-container', {
-                // Int default: 0
-                initialSlide: $scope.options.initialSlide,
-                // String: ''vertical' 'horizontal'; default:0
-                direction: $scope.options.direction,
-                // Int in miliseconds; default: 300
-                speed: $scope.options.speed,
-                // Boolean default: true
-                loop: Boolean($scope.options.loop),
-                // Int: default false
-                setWrapperSize: $scope.options.setWrapperSize,
-                // Int
-                width: $scope.options.width,
-                // Int
-                height: $scope.options.height,
-                autoplay: $scope.options.autoplay,
-                // Boolean deafult: true
-                autoplayDisableOnInteraction: Boolean($scope.options.autoplayDisableOnInteraction),
-                watchSlidesProgress: Boolean($scope.options.watchSlidesProgress),
-                freeMode: Boolean($scope.options.freeMode),
-                freeModeMomentum: Boolean($scope.options.freeModeMomentum),
-                freeModeMomentumBounce: Boolean($scope.options.freeModeMomentumBounce),
-                freeModeSticky: Boolean($scope.options.freeModeSticky),
-                // Int
-                freeModeMomentumRatio: $scope.options.freeModeMomentumRatio,
-                freeModeMomentumBounceRatio: $scope.options.freeModeMomentumBounceRatio,
-                // String "fade", "slide", "cube", "coverflow"; deafult:"slide"
-                effect: $scope.options.effect,
-                // Effect Object
-                fade: {
-                    crossFade: Boolean($scope.options.fade.crossFade)
-                },
-                cube: {
-                    slideShadows: Boolean($scope.options.cube.slideShadows),
-                    shadow: Boolean($scope.options.cube.shadow),
-                    shadowOffset: $scope.options.cube.shadowOffset,
-                    shadowScale: $scope.options.cube.shadowScale
-                },
-                coverflow: {
-                    rotate: $scope.options.coverflow.rotate,
-                    stretch: $scope.options.coverflow.stretch,
-                    depth: $scope.options.coverflow.depth,
-                    modifier: $scope.options.coverflow.modifier,
-                    slideShows: Boolean($scope.options.coverflow.slideShows)
-                },
-                parallax: Boolean($scope.options.parallax),
-                spaceBetween: $scope.options.spaceBetween,
-                slidesPerView: $scope.options.slidesPerView,
-                slidesPerColumn: $scope.options.slidesPerColumn,
-                slidesPerColumnFill: $scope.options.slidesPerColumnFill,
-                slidesPerGroup: $scope.options.slidesPerGroup,
-                centeredSlides: Boolean($scope.options.centeredSlides),
-                slidesOffsetBefore: $scope.options.slidesOffsetBefore,
-                slidesOffsetAfter: $scope.options.slidesOffsetAfter,
-                grabCursor: Boolean($scope.options.grabCursor),
-                // If we need pagination
-                pagination: '.swiper-pagination',
-                paginationClickable: Boolean($scope.options.paginationClickable),
-
-                // Navigation arrows
-                nextButton: '.swiper-button-next',
-                prevButton: '.swiper-button-prev',
-
-                // And if we need scrollbar
-                scrollbar: '.swiper-scrollbar'
-            });
+            $scope.mySwiper = new Swiper ('.swiper-container', $scope.cleanOptions($scope.options));
             // Show Swiper Params
             console.log($scope.mySwiper.params);
 
@@ -199,79 +228,13 @@
             }
             function start(options) {
                 console.log('start');
-                $scope.mySwiper = new Swiper ('.swiper-container', {
-                    initialSlide: options.initialSlide,
-                    direction: options.direction,
-                    speed: options.speed,
-                    loop: Boolean(options.loop),
-                    //setWrapperSize: options.setWrapperSize,
-                    //width: options.width,
-                    //height: options.height,
-                    // Boolean deafult: true
-                    autoplayDisableOnInteraction: Boolean(options.autoplayDisableOnInteraction),
-                    watchSlidesProgress: Boolean(options.watchSlidesProgress),
-                    freeMode: Boolean(options.freeMode),
-                    freeModeMomentum: Boolean(options.freeModeMomentum),
-                    freeModeMomentumBounce: Boolean(options.freeModeMomentumBounce),
-                    freeModeSticky: Boolean(options.freeModeSticky),
-                    freeModeMomentumRatio: options.freeModeMomentumRatio,
-                    freeModeMomentumBounceRatio: options.freeModeMomentumBounceRatio,
-                    effect: options.effect,
-                    fade: {
-                        crossFade: Boolean(options.fade.crossFade)
-                    },
-                    cube: {
-                        slideShadows: Boolean(options.cube.slideShadows),
-                        shadow: Boolean(options.cube.shadow),
-                        shadowOffset: options.cube.shadowOffset,
-                        shadowScale: options.cube.shadowScale
-                    },
-                    coverflow: {
-                        rotate: options.coverflow.rotate,
-                        stretch: options.coverflow.stretch,
-                        depth: options.coverflow.depth,
-                        modifier: options.coverflow.modifier,
-                        slideShows: Boolean(options.coverflow.slideShows)
-                    },
-                    parallax: Boolean(options.parallax),
-                    spaceBetween: options.spaceBetween,
-                    slidesPerView: options.slidesPerView,
-                    slidesPerColumn: options.slidesPerColumn,
-                    slidesPerColumnFill: options.slidesPerColumnFill,
-                    slidesPerGroup: options.slidesPerGroup,
-                    centeredSlides: Boolean(options.centeredSlides),
-                    slidesOffsetBefore: options.slidesOffsetBefore,
-                    slidesOffsetAfter: options.slidesOffsetAfter,
-                    grabCursor: Boolean(options.grabCursor),
-
-                    // If we need pagination
-                    pagination: '.swiper-pagination',
-                    paginationClickable: Boolean(options.paginationClickable),
-
-                    // Navigation arrows
-                    nextButton: '.swiper-button-next',
-                    prevButton: '.swiper-button-prev',
-
-                    // And if we need scrollbar
-                    //scrollbar: '.swiper-scrollbar',
-                });
+                $scope.mySwiper = new Swiper ('.swiper-container', $scope.cleanOptions(options));
                 console.log($scope.mySwiper.params)
                 $('.pending').detach();
 
             }
 
             //Event Listeners
-            $('#sub-nav').on('click', 'a', function(e) {
-                e.preventDefault();
-                console.log('nav click')
-                var $this = $(this);
-                var group = $this.data('group');
-                $('.sub-nav-item a').removeClass('active');
-                $this.addClass('active');
-                $('.show-group').removeClass('show-group');
-                $('#' + group).addClass('show-group')
-
-            })
 
         }]);
 
