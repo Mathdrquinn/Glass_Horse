@@ -1,0 +1,28 @@
+html, body {
+  margin:0;
+  padding:0;
+  background-color: $font-second;
+}
+body * {
+  color: $font;
+  font-family: 'Abel', sans-serif;
+  a {
+    color: $font-second;
+    text-decoration: underline;
+    cursor: pointer;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+ul {
+  margin:0;
+  padding:0;
+  li {
+    list-style-type: none;
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+  color: $font;
+  margin-top:0;
+}

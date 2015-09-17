@@ -1,34 +1,8 @@
-$carouselWidth: 500px;
-$carouselHeight: 400px;
-$main: #ffd34e;
-$second: #105b63;
-$third: #BD4932;
-$font: #18121F;
-$font-second: lighten(#fffad5,7%);
-$shadow:5px 2px 4px rgba(0,0,0,0.4);
-
-html, body {
-  margin:0;
-  padding:0;
-  background-color: $font-second;
-}
-body * {
-  color: $font;
-  font-family: 'Abel', sans-serif;
-}
-ul {
-  margin:0;
-  padding:0;
-  list-style-type: none;
-}
+@import "Variables";
 
 @import "Grid";
 
-h1, h2, h3, h4, h5, h6 {
-  color: $font;
-  margin-top:0;
-}
-
+@import "General";
 @import "View-Wrapper";
 @import "CarouselView";
 @import "Header";
@@ -36,4 +10,3 @@ h1, h2, h3, h4, h5, h6 {
 @import "Swiper";
 @import "Questions";
 @import "Media";
-

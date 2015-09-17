@@ -1,63 +1,88 @@
 console.log('brendan');
-var carouselApp = angular.module("carouselApp", [
-  "ui.router",
-  "ngResource",
-  "firebase"
-])
 
-carouselApp.config(function($stateProvider, $urlRouterProvider) {
+angular
+  .module('carouselApp', [
+    'ngCookies',
+    'ngResource',
+    'ngSanitize',
+    'ui.router',
+  ])
+  .config(($httpProvider, $locationProvider, $stateProvider, $urlRouterProvider) => {
+    $locationProvider.html5Mode(true);
+    $urlRouterProvider.otherwise('/');
+  })
+  .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
-  // Default Template, given by the 'otherwise'
-    .state('home', {
-        url: '/home',
-        views: {
-            'nav': {
-              templateUrl: 'views/nav.html',
-              controller: 'homeCtrl'
-            },
-            'main': {
-              templateUrl: 'views/main.html',
-              controller: 'carouselCtrl'
-            },
-            'options@main': {
-              templateUrl: 'views/forms/general.html',
-              controller: 'carouselCtrl'
-            }
+    .state('markup', {
+      url: '/markup',
+      views: {
+        'page': {
+          templateUrl: 'views/blue.html'
         }
+      }
     })
-    // Family state with Sub Views
-    .state('family', {
-        url: '/family',
-        views: {
-            // the main template will be placed here (relatively named)
-            '': {
-              templateUrl: 'templates/family.html',
-              controller: 'FamilyCtrl'
-             },
-            // the child views will be defined here (absolutely named)
-            'right@family': {
-              templateUrl: 'templates/family.right.html',
-              controller: 'FamilyCtrl'
-             },
-
-            // for column two, we'll define a separate controller
-            'bottom@family': {
-                templateUrl: 'templates/family.bottom.html',
-            }
+    .state('main', {
+      url: '',
+      views: {
+        'page': {
+          templateUrl: 'views/carousel/carousel.html',
+          controller: 'carouselCtrl'
         }
+      },
+      abstract: true
     })
-    .state('family.person', {
-        url: '/:personIndex',
-        views: {
-
-            // the child views will be defined here (absolutely named)
-            'right@family': {
-              templateUrl: 'templates/family.right-person.html',
-              controller: 'PersonCtrl',
-             }
-             // there is a bottom view, but it maintains its template
-
+    .state('main.general', {
+      parent: 'main',
+      url: '/',
+      views: {
+        'options@main': {
+          templateUrl: 'views/carousel/options/general.html'
         }
-    });
-  $urlRouterProvider.otherwise('/home');
+      }
+    })
+    .state('main.home.freemode', {
+      parent: 'main.home',
+      url: '',
+      views: {
+        'options@main.home': {
+          templateUrl: 'views/carousel/options/freeMode.html'
+        }
+      }
+    })
+    .state('main.home.effect', {
+      parent: 'main.home',
+      url: '',
+      views: {
+        'options@main.home': {
+          templateUrl: 'views/carousel/options/effect.html'
+        }
+      }
+    })
+    .state('main.home.spacing', {
+      parent: 'main.home',
+      url: '',
+      views: {
+        'options@main.home': {
+          templateUrl: 'views/carousel/options/spacing.html'
+        }
+      }
+    })
+    .state('main.home.touch', {
+      parent: 'main.home',
+      url: '',
+      views: {
+        'options@main.home': {
+          templateUrl: 'views/carousel/options/touch.html'
+        }
+      }
+    })
+    .state('main.home.other', {
+      parent: 'main.home',
+      url: '',
+      views: {
+        'options@main.home': {
+          templateUrl: 'views/carousel/options/other.html'
+        }
+      }
+    })
 });

@@ -3,7 +3,9 @@
 
     angular
         .module('carouselApp')
-        .controller('carouselCtrl',['$scope', '$filter', '$routeParams', function ($scope, $filter, $routeParams) {
+        .controller('carouselCtrl',['$scope', '$filter', '$state', function ($scope, $filter, $state) {
+
+            $state.go('main.general');
 
             $scope.works = 'CarouselCtrl is here';
 
@@ -59,6 +61,7 @@
                 direction: 'horizontal',
                 speed: 300,
                 loop: '1',
+                paginationClickable: '1',
                 setWrapperSize: false,
                 //width: 500,
                 height: 315,
@@ -164,6 +167,7 @@
                 grabCursor: Boolean($scope.options.grabCursor),
                 // If we need pagination
                 pagination: '.swiper-pagination',
+                paginationClickable: Boolean($scope.options.paginationClickable),
 
                 // Navigation arrows
                 nextButton: '.swiper-button-next',
@@ -242,6 +246,7 @@
 
                     // If we need pagination
                     pagination: '.swiper-pagination',
+                    paginationClickable: Boolean(options.paginationClickable),
 
                     // Navigation arrows
                     nextButton: '.swiper-button-next',
@@ -267,16 +272,6 @@
                 $('#' + group).addClass('show-group')
 
             })
-
-            ////Broadcasting Filters
-            //$scope.search = {name:''};
-            //$scope.yell = function (word) {
-            //    $scope.$broadcast('word', word);
-            //};
-            //$scope.$on('word', function (event, data) {
-            //    console.log(data); // 'Some data'
-            //    $scope.search.name = data;
-            //});
 
         }]);
 
