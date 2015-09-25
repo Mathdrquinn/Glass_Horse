@@ -8,7 +8,7 @@ angular
     'ui.router',
   ])
   .config(($httpProvider, $locationProvider, $stateProvider, $urlRouterProvider) => {
-    $locationProvider.html5Mode(true);
+    // $locationProvider.html5Mode(true);
     $urlRouterProvider.otherwise('/');
   })
   .config(function($stateProvider, $urlRouterProvider) {
@@ -17,7 +17,8 @@ angular
       url: '/markup',
       views: {
         'page': {
-          templateUrl: 'views/blue.html'
+          templateUrl: 'views/markup.html',
+          controller: 'carouselCtrl'
         }
       }
     })

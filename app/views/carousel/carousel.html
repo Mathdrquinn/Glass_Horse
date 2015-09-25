@@ -41,13 +41,13 @@
 <!-- End Carousel-->
 <!-- Begin Form -->
 <form action="">
-    <ul id="sub-nav">
-        <li class="sub-nav-item"><a ui-sref="main.general"  data-group="General" >General</a></li>
-        <li class="sub-nav-item"><a ui-sref="main.freemode" data-group="FreeMode" active>Free Mode</a></li>
-        <li class="sub-nav-item"><a ui-sref="main.effect" data-group="Effect" >Effect</a></li>
-        <li class="sub-nav-item"><a ui-sref="main.spacing" data-group="Spacing" >Spacing/Grouping</a></li>
-        <li class="sub-nav-item"><a ui-sref="main.touch" data-group="Touch">Touch</a></li>
-        <li class="sub-nav-item"><a ui-sref="main.other" data-group="Other" >Other</a></li>
+    <ul id="sub-nav" ng-init="active = 'general'">
+        <li class="sub-nav-item"><a ng-class="{'active' : active == 'general'}" ui-sref="main.general"  data-group="General" ng-click="active='general'">General</a></li>
+        <li class="sub-nav-item"><a ng-class="{'active' : active == 'freeMode'}" ui-sref="main.freemode" data-group="FreeMode" ng-click="active='freeMode'">Free Mode</a></li>
+        <li class="sub-nav-item"><a ng-class="{'active' : active == 'effect'}" ui-sref="main.effect" data-group="Effect" ng-click="active='effect'">Effect</a></li>
+        <li class="sub-nav-item"><a ng-class="{'active' : active == 'spacing'}" ui-sref="main.spacing" data-group="Spacing" ng-click="active='spacing'">Spacing/Grouping</a></li>
+        <li class="sub-nav-item"><a ng-class="{'active' : active == 'touch'}" ui-sref="main.touch" data-group="Touch" ng-click="active='touch'">Touch</a></li>
+        <li class="sub-nav-item"><a ng-class="{'active' : active == 'other'}" ui-sref="main.other" data-group="Other" ng-click="active='other'">Other</a></li>
     </ul>
     <div id="Options" ui-view="options"></div>
 </form>

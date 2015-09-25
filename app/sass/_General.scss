@@ -26,3 +26,27 @@ h1, h2, h3, h4, h5, h6 {
   color: $font;
   margin-top:0;
 }
+p, pre {
+  font-size: 16px;
+  line-height: 18px;
+}
+pre {
+  padding: 10px;
+  font-family: monospace;
+  color: $third;
+  background-color: $shadow-color;
+  border: 1px solid $shadow-color-dark;
+  border-radius: 3px;
+}
+.partial-pre {
+  font-family: monospace;
+  padding: 2px;
+  color: $third;
+  background-color: $shadow-color;
+  border: 1px solid $shadow-color-dark;
+  border-radius: 3px;
+}
+.container {
+  width: 100%;
+  padding: 15px;
+}

@@ -6,4 +6,6 @@ $third: #BD4932;
 $font: #18121F;
 $white: #fffffe;
 $font-second: lighten(#fffad5,7%);
-$shadow:5px 2px 4px rgba(0,0,0,0.4);
+$shadow-color: rgba(0,0,0,0.2);
+$shadow-color-dark: rgba(0,0,0,0.2);
+$shadow:5px 2px 4px $shadow-color;
