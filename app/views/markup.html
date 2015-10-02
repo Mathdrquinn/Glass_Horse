@@ -1,8 +1,8 @@
 <div class="container">
-  <p>Inder into the <span class="partial-pre">&lt;head&gt;</span></p>
-  <pre>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.x.x/css/swiper.min.css"&gt;</pre>
-  <p>Insert somewhere into the <span class="partial-pre">&lt;body&gt;</span> tag.</p>
-  <pre>&lt;div class="swiper-container"&gt;
+  <p>Insert into the <span class="partial-code">&lt;head&gt;</span> tag.</p>
+  <code>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.x.x/css/swiper.min.css"&gt;</code>
+  <p>Insert somewhere into the <span class="partial-code">&lt;body&gt;</span> tag.</p>
+  <code>&lt;div class="swiper-container"&gt;
 
       &lt;!-- Additional required wrapper --&gt;
       &lt;div class="swiper-wrapper"&gt;
@@ -37,14 +37,14 @@
 
       &lt;!-- If we need scrollbar --&gt;
       &lt;div class="swiper-scrollbar"&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
-  <p>Insert just before the closing <span class="partial-pre">&lt;/body&gt;</span> tag</p>
-  <pre>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.1.2/js/swiper.min.js"&gt;&lt;/script&gt;
-    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.x.x/js/swiper.jquery.min.js"&gt;&lt;/script&gt;
-    &lt;script&gt;
-      $(document).ready(function () {
-        var options = {{ printOptions(cleanOptions(standardOptions, options)) }}
-        mySwiper = new Swiper ('.swiper-container', options)
-      });
-    &lt;/script&gt;</pre>
+&lt;/div&gt;</code>
+  <p>Insert just before the closing <span class="partial-code">&lt;/body&gt;</span> tag</p>
+  <code>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.1.2/js/swiper.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.x.x/js/swiper.jquery.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  $(document).ready(function () {
+    var options = <br /><pre class="no-buff" style="margin-left: 93px;">{{ printOptions(cleanOptions(standardOptions), cleanOptions(options)) }}</pre>
+    mySwiper = new Swiper ('.swiper-container', options)
+  });
+&lt;/script&gt;</code>
 </div>

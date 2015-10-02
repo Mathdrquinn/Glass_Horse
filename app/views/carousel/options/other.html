@@ -1,1 +1,22 @@
-<li id="Other" class="option-group"></li>
+<section id="Other" class="option-group small-12">
+  <div class="label-container">
+      <label for="preloadImages">
+          Preload Images
+          <br/>
+          <select name="preloadImages" id="preloadImages" ng-model="options.preloadImages" ng-change="lazyChange(options.preloadImages, 'lazyLoading')">
+              <option value="1">Yes</option>
+              <option value="">No</option>
+          </select>
+      </label>
+  </div>
+  <div class="label-container">
+    <label for="lazyLoading">
+        Lazy Loading
+        <br/>
+        <select name="lazyLoading" id="lazyLoading" ng-model="options.lazyLoading" ng-change="lazyChange(options.lazyLoading, 'preloadImages')">
+            <option value="1">Yes</option>
+            <option value="">No</option>
+        </select>
+    </label>
+  </div>
+</section>

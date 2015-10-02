@@ -1,4 +1,4 @@
-<li id="General" class="option-group">
+<section id="General" class="option-group small-12">
     <div class="label-container">
         <label for="initialSlide">
             Initial Slide
@@ -36,6 +36,13 @@
         </label>
     </div>
     <div class="label-container">
+        <label for="autoplay">
+            Autoplay (delay in ms between transitions)
+            <br/>
+            <input id="autoplay" type="number" ng-model="options.autoplay" value="" ng-change="change()"/>
+        </label>
+    </div>
+    <div class="label-container">
         <label for="autoplayDisableOnInteraction">
             Disable Autoplay On Interaction
             <br/>
@@ -55,4 +62,4 @@
             </select>
         </label>
     </div>
-</li>
+</section>

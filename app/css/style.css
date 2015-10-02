@@ -4,7 +4,6 @@
 
 .row {
   margin: 0 auto;
-  max-width: 62.5rem;
   width: 100%;
 }
 .row:before, .row:after {
@@ -1268,14 +1267,6 @@ body * {
   color: #18121F;
   font-family: 'Abel', sans-serif;
 }
-body * a {
-  color: #fffef9;
-  text-decoration: underline;
-  cursor: pointer;
-}
-body * a:hover {
-  text-decoration: none;
-}
 
 ul {
   margin: 0;
@@ -1290,21 +1281,32 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
 }
 
-p, pre {
+p, pre, code {
   font-size: 16px;
   line-height: 18px;
 }
 
-pre {
+code {
+  display: block;
   padding: 10px;
   font-family: monospace;
   color: #BD4932;
   background-color: rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 3px;
+  white-space: pre;
+  max-width: 100%;
+  overflow: scroll;
 }
 
-.partial-pre {
+pre {
+  padding: 10px;
+  font-family: monospace;
+  color: #BD4932;
+}
+
+.partial-code {
+  display: inline-block;
   font-family: monospace;
   padding: 2px;
   color: #BD4932;
@@ -1318,27 +1320,36 @@ pre {
   padding: 15px;
 }
 
-#wrapper {
+.no-buff {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
   margin: 0;
   padding: 0;
 }
 
 #content {
   width: 100%;
-  height: 400px;
+  height: 100%;
   overflow: hidden;
+}
+
+.swiper-outer-container {
+  padding: 2.5em;
 }
 
 .pending {
   text-align: center;
-  height: 400px;
+  height: 100%;
 }
 .pending img {
   height: 100%;
 }
 
 .swiper-container {
-  height: 400px;
+  height: 100%;
   overflow: hidden;
 }
 .swiper-container .swiper-slide {
@@ -1886,21 +1897,6 @@ button.swiper-pagination-bullet {
 }
 .sub-nav-item a.active {
   border-bottom-color: #BD4932;
-}
-
-.option-group {
-  width: 100%;
-  position: absolute;
-}
-
-.option-group.show-group {
-  display: block;
-  position: relative;
-}
-
-.options-group {
-  width: 100%;
-  display: none;
 }
 
 .options-group .option {

@@ -68,11 +68,15 @@ angular.module('carouselApp').factory('carouselSvc', function() {
       allowSwipeToPrev: '1',
       allowSwipeToNext: '1',
       noSwiping: '1',
+      // Disable preloading of all images
+      preloadImages: '1',
+      // Enable lazy loading
+      lazyLoading: ''
   };
 
   options = {
       initialSlide: 0,
-      direction: 'horizontal',
+      direction: 'vertical',
       speed: 300,
       loop: '1',
       paginationClickable: '1',
@@ -134,6 +138,10 @@ angular.module('carouselApp').factory('carouselSvc', function() {
       allowSwipeToPrev: '1',
       allowSwipeToNext: '1',
       noSwiping: '1',
+      // Disable preloading of all images
+      preloadImages: '1',
+      // Enable lazy loading
+      lazyLoading: ''
   };
 
   cleanOptions = function (options) {
@@ -145,6 +153,7 @@ angular.module('carouselApp').factory('carouselSvc', function() {
         //setWrapperSize: options.setWrapperSize,
         //width: options.width,
         //height: options.height,
+        autoplay: options.autoplay,
         // Boolean deafult: true
         autoplayDisableOnInteraction: Boolean(options.autoplayDisableOnInteraction),
         watchSlidesProgress: Boolean(options.watchSlidesProgress),
@@ -199,6 +208,10 @@ angular.module('carouselApp').factory('carouselSvc', function() {
         allowSwipeToPrev: Boolean(options.allowSwipeToPrev),
         allowSwipeToNext: Boolean(options.allowSwipeToNext),
         noSwiping: Boolean(options.noSwiping),
+        // Disable preloading of all images
+        preloadImages: Boolean(options.preloadImages),
+        // Enable lazy loading
+        lazyLoading: Boolean(options.lazyLoading),
 
         // If we need pagination
         pagination: '.swiper-pagination',
@@ -238,6 +251,30 @@ angular.module('carouselApp').factory('carouselSvc', function() {
           '</div>',
           '<!-- End Standard Slides-->'
       ].join(''),
+      lazySlidesHtml: [
+          '<!-- Begin Slides -->',
+          '<div class=\'swiper-slide\'>',
+              '<span class=\'slide-title\'>Slide 1</span>',
+              '<img class="swiper-lazy" data-src=\'images/300_1.jpg\' alt=\'Placebear\' />',
+              '<div class="swiper-lazy-preloader"></div>',
+          '</div>',
+          '<div class=\'swiper-slide\'>',
+              '<span class=\'slide-title\'>Slide 2</span>',
+              '<img class="swiper-lazy"  data-src=\'images/red.jpg\' alt=\'Placebear\' />',
+              '<div class="swiper-lazy-preloader"></div>',
+          '</div>',
+          '<div class=\'swiper-slide\'>',
+              '<span class=\'slide-title\'>Slide 3</span>',
+              '<img class="swiper-lazy" data-src=\'images/301.jpeg\' alt=\'Placebear\' />',
+              '<div class="swiper-lazy-preloader"></div>',
+          '</div>',
+          '<div class=\'swiper-slide\'>',
+              '<span class=\'slide-title\'>Slide 4</span>',
+              '<img class="swiper-lazy" data-src=\'images/300.jpeg\' alt=\'Placebear\' />',
+              '<div class="swiper-lazy-preloader"></div>',
+          '</div>',
+          '<!-- End Standard Slides-->'
+      ].join(''),
       additionalSlidesHtml: [],
       outerBottomHtlm: [
               '</div>',
@@ -255,14 +292,19 @@ angular.module('carouselApp').factory('carouselSvc', function() {
       },
       getHtml: function () {
           return this.outerTopHtml + this.standardSlidesHtml + this.getAdditionalSlideHtml() + this.outerBottomHtlm;
+      },
+      getLazyHtml: function () {
+          return this.outerTopHtml + this.lazySlidesHtml + this.getAdditionalSlideHtml() + this.outerBottomHtlm;
       }
   };
 
   printOptions = function (standard, options) {
     var newProps = {};
+    console.log(options)
     for (key in options) {
-      debugger;
-      if (options[key] == standard[key]) {
+      console.log(key)
+      console.log(options[key])
+      if (options[key] !== standard[key]) {
         newProps[key] = options[key];
       }
     }

@@ -6,14 +6,6 @@ html, body {
 body * {
   color: $font;
   font-family: 'Abel', sans-serif;
-  a {
-    color: $font-second;
-    text-decoration: underline;
-    cursor: pointer;
-    &:hover {
-      text-decoration: none;
-    }
-  }
 }
 ul {
   margin:0;
@@ -26,19 +18,29 @@ h1, h2, h3, h4, h5, h6 {
   color: $font;
   margin-top:0;
 }
-p, pre {
+p, pre, code {
   font-size: 16px;
   line-height: 18px;
 }
-pre {
+code {
+  display: block;
   padding: 10px;
   font-family: monospace;
   color: $third;
   background-color: $shadow-color;
   border: 1px solid $shadow-color-dark;
   border-radius: 3px;
+  white-space: pre;
+  max-width: 100%;
+  overflow: scroll;
 }
-.partial-pre {
+pre {
+  padding: 10px;
+  font-family: monospace;
+  color: $third;
+}
+.partial-code {
+  display: inline-block;
   font-family: monospace;
   padding: 2px;
   color: $third;
@@ -49,4 +51,8 @@ pre {
 .container {
   width: 100%;
   padding: 15px;
+}
+.no-buff {
+  padding: 0;
+  margin: 0;
 }

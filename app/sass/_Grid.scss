@@ -132,7 +132,7 @@ $last-child-float: right;
   // use @include grid-row(collapse); to collapsed a container row margins
   @else if $behavior == collapse {
     margin: 0;
-    max-width: $row-width;
+    // max-width: $row-width;
     width: 100%;
   }
 
@@ -146,7 +146,7 @@ $last-child-float: right;
   // use @include grid-row; to use a container row
   @else {
     margin: 0 auto;
-    max-width: $row-width;
+    // max-width: $row-width;
     width: 100%;
   }
 
@@ -360,4 +360,3 @@ $last-child-float: right;
     @include grid-html-classes($size:xxlarge);
   }
 }
-
